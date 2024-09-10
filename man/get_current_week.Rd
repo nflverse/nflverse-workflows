@@ -17,4 +17,5 @@ This will count a new week starting on Thursdays.
 \examples{
 get_current_week()
 
+get_current_week()
 }
