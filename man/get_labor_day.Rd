@@ -4,10 +4,13 @@
 \alias{get_labor_day}
 \title{Compute Date of Labor Day}
 \usage{
-get_labor_day(year)
+get_labor_day(year, as_json = !interactive())
 }
 \arguments{
 \item{year}{Numeric or Character year. 4 Digits.}
+
+\item{as_json}{If \code{TRUE}, the function will output in JSON format. Defaults
+to TRUE in non-interactive sessions.}
 }
 \value{
 Object of Class \code{Date}

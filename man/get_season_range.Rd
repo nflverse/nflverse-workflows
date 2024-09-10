@@ -4,12 +4,19 @@
 \alias{get_season_range}
 \title{Compute Range of Seasons}
 \usage{
-get_season_range(start = 1999, end = get_current_season())
+get_season_range(
+  start = 1999,
+  end = get_current_season(),
+  as_json = !interactive()
+)
 }
 \arguments{
 \item{start}{Numeric or Character year. 4 Digits.}
 
 \item{end}{Numeric or Character year. 4 Digits. Defaults to \code{\link[=get_current_season]{get_current_season()}}}
+
+\item{as_json}{If \code{TRUE}, the function will output in JSON format. Defaults
+to TRUE in non-interactive sessions.}
 }
 \value{
 Object of Class \code{integer}
@@ -21,4 +28,5 @@ used in workflow setups when code should run for multiple seasons
 \examples{
 # Compute range from 2016 to current season
 get_season_range(2016)
+get_season_range(2016, as_json = TRUE)
 }

@@ -4,7 +4,11 @@
 \alias{get_current_week}
 \title{Get Current Week}
 \usage{
-get_current_week()
+get_current_week(as_json = !interactive())
+}
+\arguments{
+\item{as_json}{If \code{TRUE}, the function will output in JSON format. Defaults
+to TRUE in non-interactive sessions.}
 }
 \value{
 current nfl regular season week as a numeric
@@ -16,6 +20,5 @@ This will count a new week starting on Thursdays.
 }
 \examples{
 get_current_week()
-
 get_current_week()
 }

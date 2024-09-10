@@ -4,13 +4,16 @@
 \alias{get_current_season}
 \title{Get Latest Season}
 \usage{
-get_current_season(roster = FALSE)
+get_current_season(roster = FALSE, as_json = !interactive())
 }
 \arguments{
 \item{roster}{Either \code{TRUE} or \code{FALSE}.
 If \code{TRUE}, will return current year after March 15th, otherwise previous year.
 If \code{FALSE}, will return current year on or after Thursday following Labor Day,
 i.e. Thursday after the first Monday in September. Otherwise previous year.}
+
+\item{as_json}{If \code{TRUE}, the function will output in JSON format. Defaults
+to TRUE in non-interactive sessions.}
 }
 \value{
 most recent season (a four digit numeric)
