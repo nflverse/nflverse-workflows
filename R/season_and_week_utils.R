@@ -14,6 +14,7 @@
 #' @export
 #' @examples
 #' get_current_season()
+#' get_current_season(as_json = TRUE)
 #' get_current_season(roster = TRUE)
 get_current_season <- function(roster = FALSE, as_json = !interactive()) {
   today <- Sys.Date()
@@ -48,6 +49,7 @@ get_current_season <- function(roster = FALSE, as_json = !interactive()) {
 #' @export
 #' @examples
 #' get_current_week()
+#' get_current_week(as_json = TRUE)
 get_current_week <- function(as_json = !interactive()) {
 
   # Find first Monday of September in current season
