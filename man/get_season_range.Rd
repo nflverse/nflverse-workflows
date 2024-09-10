@@ -6,7 +6,7 @@
 \usage{
 get_season_range(
   start = 1999,
-  end = get_current_season(),
+  end = get_current_season(as_json = FALSE),
   as_json = !interactive()
 )
 }

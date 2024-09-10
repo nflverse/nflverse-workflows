@@ -104,7 +104,7 @@ get_labor_day <- function(year, as_json = !interactive()){
 #' get_season_range(2016)
 #' get_season_range(2016, as_json = TRUE)
 get_season_range <- function(start = 1999,
-                             end = get_current_season(),
+                             end = get_current_season(as_json = FALSE),
                              as_json = !interactive()){
   format_output(seq(start, end), as_json = as_json)
 }
