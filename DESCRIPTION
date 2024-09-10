@@ -1,0 +1,11 @@
+Package: nflverse.workflows
+Title: Utilities for Automated Workflows
+Version: 0.0.1
+Authors@R: 
+    person("Sebastian", "Carl", , "mrcaseb@gmail.com", role = c("aut", "cre"))
+Description: Provides some utility functions in a lightweight package for
+    usage in workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
