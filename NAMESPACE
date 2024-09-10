@@ -3,3 +3,4 @@
 export(get_current_season)
 export(get_current_week)
 export(get_labor_day)
+export(get_season_range)

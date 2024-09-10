@@ -20,4 +20,5 @@ A helper function to choose the most recent NFL season
 }
 \examples{
 get_current_season()
+get_current_season(roster = TRUE)
 }

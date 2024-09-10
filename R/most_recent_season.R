@@ -1,5 +1,3 @@
-# CODE EXTRACTED FROM nflreadr
-
 #' Get Latest Season
 #'
 #' A helper function to choose the most recent NFL season
@@ -13,6 +11,7 @@
 #' @export
 #' @examples
 #' get_current_season()
+#' get_current_season(roster = TRUE)
 get_current_season <- function(roster = FALSE) {
   today <- Sys.Date()
   current_year <- as.integer(format(today, format = "%Y"))
@@ -84,3 +83,18 @@ get_labor_day <- function(year){
   labor_day <- range[numeric_wdays == 1][1]
   labor_day
 }
+
+#' Compute Range of Seasons
+#'
+#' Computes a range of seasons from given start to end. This is intended to be
+#' used in workflow setups when code should run for multiple seasons
+#'
+#' @param start Numeric or Character year. 4 Digits.
+#' @param end Numeric or Character year. 4 Digits. Defaults to [get_current_season()]
+#'
+#' @export
+#' @return Object of Class `integer`
+#' @examples
+#' # Compute range from 2016 to current season
+#' get_season_range(2016)
+get_season_range <- function(start = 1999, end = get_current_season()) seq(start, end)
