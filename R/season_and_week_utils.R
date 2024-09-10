@@ -78,7 +78,7 @@ get_current_week <- function(as_json = !interactive()) {
 #' @return Object of Class `Date`
 #' @examples
 #' # 2023 Labor Day was on Sep 4th
-#' compute_labor_day(2023)
+#' get_labor_day(2023)
 get_labor_day <- function(year, as_json = !interactive()){
   stopifnot(length(year) == 1)
   earliest <- as.Date(paste(year, "09", "01", sep = "-"))

@@ -20,5 +20,5 @@ Computes the date of the Labor Day, i.e. the first Monday in September, in a giv
 }
 \examples{
 # 2023 Labor Day was on Sep 4th
-compute_labor_day(2023)
+get_labor_day(2023)
 }
