@@ -1,3 +1,4 @@
 ^nflverse-workflows\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^data-raw$
