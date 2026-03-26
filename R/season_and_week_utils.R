@@ -4,8 +4,13 @@
 #'
 #' @param roster Either `TRUE` or `FALSE`.
 #' If `TRUE`, will return current year after March 15th, otherwise previous year.
-#' If `FALSE`, will return current year on or after Thursday following Labor Day,
-#' i.e. Thursday after the first Monday in September. Otherwise previous year.
+#' If `FALSE`, will return current year on or after Wednesday following Labor Day,
+#' i.e. Wednesday after the first Monday in September. Otherwise previous year.
+#' Note (March 2026): This used to return new season on Thursday following Labor
+#' Day but NFL announced in March 2026 that the 2026 season will kick off on
+#' Wednesday because the TNF game will be played in Australia. We expect this
+#' to happen in future seasons as well and decided to flip the switch on
+#' Wednesday going forward.
 #'
 #' @param as_json If `TRUE`, the function will output in JSON format. Defaults
 #'  to TRUE in non-interactive sessions.
@@ -24,7 +29,7 @@ get_current_season <- function(roster = FALSE, as_json = !interactive()) {
   # First Monday of September
   labor_day <- get_labor_day(current_year)
   # Thursday following Labor Day is TNF season opener
-  season_opener <- labor_day + 3
+  season_opener <- labor_day + 2
 
   if ((isFALSE(roster) && today >= season_opener) ||
       (isTRUE(roster) && current_month == 3 && current_day >= 15) ||

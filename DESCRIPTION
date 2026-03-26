@@ -1,6 +1,6 @@
 Package: nflverse.workflows
 Title: Utilities for Automated Workflows
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person("Sebastian", "Carl", , "mrcaseb@gmail.com", role = c("aut", "cre"))
 Description: Provides some utility functions in a lightweight package for
@@ -8,7 +8,7 @@ Description: Provides some utility functions in a lightweight package for
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 URL: https://github.com/nflverse/nflverse.workflows
 BugReports: https://github.com/nflverse/nflverse.workflows/issues
 Depends: 
