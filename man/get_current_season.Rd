@@ -9,8 +9,13 @@ get_current_season(roster = FALSE, as_json = !interactive())
 \arguments{
 \item{roster}{Either \code{TRUE} or \code{FALSE}.
 If \code{TRUE}, will return current year after March 15th, otherwise previous year.
-If \code{FALSE}, will return current year on or after Thursday following Labor Day,
-i.e. Thursday after the first Monday in September. Otherwise previous year.}
+If \code{FALSE}, will return current year on or after Wednesday following Labor Day,
+i.e. Wednesday after the first Monday in September. Otherwise previous year.
+Note (March 2026): This used to return new season on Thursday following Labor
+Day but NFL announced in March 2026 that the 2026 season will kick off on
+Wednesday because the TNF game will be played in Australia. We expect this
+to happen in future seasons as well and decided to flip the switch on
+Wednesday going forward.}
 
 \item{as_json}{If \code{TRUE}, the function will output in JSON format. Defaults
 to TRUE in non-interactive sessions.}
